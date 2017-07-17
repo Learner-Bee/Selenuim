@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class GetDemo {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "D:/软件/selenium/selenium-2.42.2/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		WebDriver dr=new ChromeDriver();
 		dr.get("https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=selenium&rsv_pq=f46b5a9800008ffa&rsv_t=4c88uSEwEpRZCK9nFEaiLTxCm613M9kwN%2B09HjHlBSgNgFUIAJ3WfNCmw8w&rqlang=cn&rsv_enter=1&rsv_sug3=1/");
 		

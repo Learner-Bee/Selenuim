@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BrowserDemo {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "D:/软件/selenium/selenium-2.42.2/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
         WebDriver dr=new ChromeDriver();
         dr.get("http://www.yiibai.com/selenium/");
         dr.manage().window().maximize();//将窗口最大化
