@@ -6,38 +6,38 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 /**
- * Ä£ÄâÊó±ê£¬ÏÔÊ¾Ğü¸¡ÏÂÀ­´°Ìå
- * 1¡¢ÕÒµ½Ä¿±êÔªËØ
- * 2¡¢ĞÂ½¨Ä£ÄâÊó±ê¶ÔÏó£¨Í¨¹ıWebDriver·â×°µÄÒ»¸öÀàActions£©
- * 3¡¢½«Êó±êÒÆ¶¯µ½ÔªËØÉÏ£¨½«Ä£ÄâµÄÊÂ¼ş¹¹½¨³ÉÒ»¸ö²Ù×÷£©
- * 4¡¢µ÷ÓÃperformÊÍ·Å²Ù×÷£¨¼´ÊÍ·ÅÊó±ê£©
+ * æ¨¡æ‹Ÿé¼ æ ‡ï¼Œæ˜¾ç¤ºæ‚¬æµ®ä¸‹æ‹‰çª—ä½“
+ * 1ã€æ‰¾åˆ°ç›®æ ‡å…ƒç´ 
+ * 2ã€æ–°å»ºæ¨¡æ‹Ÿé¼ æ ‡å¯¹è±¡ï¼ˆé€šè¿‡WebDriverå°è£…çš„ä¸€ä¸ªç±»Actionsï¼‰
+ * 3ã€å°†é¼ æ ‡ç§»åŠ¨åˆ°å…ƒç´ ä¸Šï¼ˆåˆ©ç”¨moveToElementï¼ˆelementï¼‰.build().perform()å®ç°æ‚¬åœï¼‰
+ * 4ã€ç‚¹å‡»éšè—çš„ä¸‹æ‹‰èœå•ä¸­çš„linkï¼ˆé€šè¿‡findElement(By.linkText(""))ï¼‰
  * @author Lily
  *
  */
 public class MouserOverLogin {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver dr =new ChromeDriver();
-		dr.get("https://www.jd.com/");
-		dr.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		WebElement element=dr.findElement(By.linkText("ÎÒµÄ¾©¶«"));
+		dr.get("https://www.baidu.com/");
+		dr.manage().window().maximize();
+		WebElement element=dr.findElement(By.linkText("è®¾ç½®"));
 		Actions action=new Actions(dr);
-		action.moveToElement(element).build();
-		
-		Select option=new Select(element);
-		option.selectByVisibleText("´ı´¦Àí¶©µ¥");
+		action.moveToElement(element).build().perform();
+		//mouserOverlogin.perform();
+		dr.findElement(By.linkText("æœç´¢è®¾ç½®")).click();
 		//dr.close();
 		
 		
-		//dr.findElement(By.xpath("*[@id="ttbar-myjd"]/div[2]/div[2]/div[2]/div[2]/a/text()")).click();
+		
 				
 
-		//dr.findElement(By.linkText("´ı´¦Àí¶©µ¥")).click();
-		//action.moveToElement(element).perform();
+		
+		
 		
 	}
 
