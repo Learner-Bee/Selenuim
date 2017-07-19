@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FirstDemo {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException  {
 
 		System.setProperty("webdriver.chrome.driver", "D:/软件/selenium/selenium-2.42.2/chromedriver.exe");
 
@@ -22,11 +22,11 @@ public class FirstDemo {
 		//sendKeys(String string):向定位的text输入框输入想要输入的内容。上传文件也可以用sendKeys，string为上传文件的路径
 		driver.findElement(By.id("su")).click();
 
-		try {
+		try{
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	    } catch (InterruptedException e) {
+		e.printStackTrace();
+	    }
 
 		// driver.quit();//閫�鍑�
 		// driver.close(); //鍏抽棴
