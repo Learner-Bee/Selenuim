@@ -14,9 +14,9 @@ public class NewTestNG {
 	  dr.get("https://www.baidu.com/");
 	  WebElement element=dr.findElement(By.id("kw"));
 	  element.sendKeys("testNG");
-	  assert element.getText().contains("testNG");
+	  String a=element.getAttribute("testNG");
 	  dr.findElement(By.id("su")).click();
-	  System.out.println("OK");
+	  System.out.println(a);
 	  
   }
 }

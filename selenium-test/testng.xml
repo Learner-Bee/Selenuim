@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF_8"?>
+<!DOCTYPE suite SYSTEM "http:testng.org/testng-1.0.dtd">
+<suite name="Default suite" allow-return-values="true">
+<test name="Dafault test">
+<classes>
+<class naem="birdieAuto.jenkins_demoTest"/>
+</classes>
+</test><!--Test-->
+</suite><!--Suite-->
