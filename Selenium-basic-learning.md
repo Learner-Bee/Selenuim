@@ -83,6 +83,7 @@ Action action =new Action(dr);
 * 双击：action.doubleClick();
 * 悬停：action.moveToElement();
 * 拖拽：action.drapAndDrop();
+
 ##8、键盘操作
 
 * action.sendKeys(element,Keys.SHIT);shift键
@@ -93,3 +94,8 @@ Action action =new Action(dr);
 * action.keyDown(element,keys.SHIT).sendKeys("").keyUP(element,keys.SHIT);//通过键盘操作输入数据
 * .build();//获得操作action
 * ac.perform();//执行动作
+
+##框架（Framework）
+
+1、什么是框架？
+框架是整个或部分系统的可重用设计，表现为一组抽象构件及构件实例间交互的方法。另一种定义认为，框架是可被应用开发者定制的应用骨架
