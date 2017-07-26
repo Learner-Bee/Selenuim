@@ -24,10 +24,10 @@ public class FileUpload {
 		
 		WebElement element2=dr.findElement(By.id("upCodeFile"));
 		//String filepath="filepath.csv";
-		element.sendKeys("E:/learn/Selenuim/filepath.csv");
+		element.sendKeys("E:\filepath.csv");
 		Thread.sleep(5000);
 		//dr.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		dr.findElement(By.id("btn_upCodeFile")).click();
+		//dr.findElement(By.id("btn_upCodeFile")).click();
 
 	}
 
