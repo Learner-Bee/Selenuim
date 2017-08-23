@@ -8,6 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * 下拉框选择、上传文件
+ * @author Administrator
+ *
+ */
 public class FileUpload {
 
 	public static void main(String[] args) throws InterruptedException {

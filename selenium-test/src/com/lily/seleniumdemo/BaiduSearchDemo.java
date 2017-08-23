@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * 1、打开百度页面，找到输入框，传值，然后点击搜索按钮
  * 2、在搜索结果页，定位第6个结果，获取该位置的文字内容
  * 3、通过断言判断是否包含指定文字，点击第6个结果
- * 5、切换页面到最新页面
+ * 5、通过页面handle切换页面到最新页面
  * 4、获得最新页的title，打印出来
  * @author Administrator
  *
@@ -21,7 +21,7 @@ public class BaiduSearchDemo {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver dr = new ChromeDriver();
 		dr.manage().window().maximize();
-		dr.get("https://www.baidu.com/");
+  		dr.get("https://www.baidu.com/");
 		dr.findElement(By.id("kw")).sendKeys("Selenium");
 		dr.findElement(By.id("su")).click();
 		WebElement element =dr.findElement(By.linkText("功能自动化测试工具——Selenium篇"));

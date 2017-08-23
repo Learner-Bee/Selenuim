@@ -6,6 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * 切换浏览器。返回上一级和前进到下一级
+ * @author Administrator
+ *
+ */
 public class BrowserDemo {
 
 	public static void main(String[] args) {
@@ -17,6 +22,7 @@ public class BrowserDemo {
         try{
         	//dr.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         	Thread.sleep(5000);
+        	
         }catch(InterruptedException e){
         	e.printStackTrace();
         }
@@ -26,5 +32,6 @@ public class BrowserDemo {
         dr.navigate().refresh();//刷新页面
         dr.quit();
 	}
+	
 
 }

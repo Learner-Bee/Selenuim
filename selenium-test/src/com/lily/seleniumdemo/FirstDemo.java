@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FirstDemo {
-
+                                                                                                                                                                                  
 	public static void main(String[] args) throws InterruptedException  {
 
 		System.setProperty("webdriver.chrome.driver", "D:/软件/selenium/selenium-2.42.2/chromedriver.exe");

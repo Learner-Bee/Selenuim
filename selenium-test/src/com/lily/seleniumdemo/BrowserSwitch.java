@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 /**
- * 用handle切换浏览器
+ * 一、用handle切换浏览器
  * switchTo方法：
  * 1、分别获取当前页面的handle，和所有页面的handles集合
  * 2、循环遍历handles，与当前页handle比较，
@@ -19,7 +19,9 @@ import org.openqa.selenium.interactions.Actions;
  *   2.2不一致，切换页面。再比较页面的tiele是否和给定的title一值
  *      2.2.1不一致，继续循环
  *      2.2.2一致，说明该页面就是要查找的页面。进行后续操作
- * 
+ * 二、键盘操作
+ * 通过键盘的Action类定义对象，进行键盘操作
+ *
  * @author Administrator
  *
  */
