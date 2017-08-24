@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.lily.seleniumdemo.NewTestNG">
+      <class name="com.lily.marketadmin.AddProduct">
         <methods>
           <include name="f"/>
         </methods>
-      </class> <!-- com.lily.seleniumdemo.NewTestNG -->
+      </class> <!-- com.lily.marketadmin.AddProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

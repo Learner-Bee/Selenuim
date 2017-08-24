@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14946" started-at="2017-08-23T08:40:18Z" finished-at="2017-08-23T08:40:33Z">
+  <suite name="Default suite" duration-ms="19988" started-at="2017-08-24T09:23:53Z" finished-at="2017-08-24T09:24:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14946" started-at="2017-08-23T08:40:18Z" finished-at="2017-08-23T08:40:33Z">
-      <class name="com.lily.seleniumdemo.NewTestNG">
-        <test-method status="PASS" signature="f()[pri:0, instance:com.lily.seleniumdemo.NewTestNG@7085bdee]" name="f" duration-ms="14942" started-at="2017-08-23T16:40:18Z" finished-at="2017-08-23T16:40:33Z">
+    <test name="Default test" duration-ms="19988" started-at="2017-08-24T09:23:53Z" finished-at="2017-08-24T09:24:13Z">
+      <class name="com.lily.marketadmin.AddProduct">
+        <test-method status="PASS" signature="f()[pri:0, instance:com.lily.marketadmin.AddProduct@7085bdee]" name="f" duration-ms="19984" started-at="2017-08-24T17:23:53Z" finished-at="2017-08-24T17:24:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- com.lily.seleniumdemo.NewTestNG -->
+      </class> <!-- com.lily.marketadmin.AddProduct -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
