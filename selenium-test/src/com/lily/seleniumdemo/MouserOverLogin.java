@@ -30,13 +30,7 @@ public class MouserOverLogin {
 		action.moveToElement(element).build().perform();
 		//mouserOverlogin.perform();
 		dr.findElement(By.linkText("搜索设置")).click();
-		//dr.close();
-		
-		
-		
-				
-
-		
+		//dr.close();		
 		
 		
 	}
