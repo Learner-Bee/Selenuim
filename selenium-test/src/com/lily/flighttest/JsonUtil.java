@@ -3,7 +3,6 @@
  */
 package com.lily.flighttest;
 
-
 import org.junit.Assert;
 
 import com.alibaba.fastjson.JSONArray;
@@ -37,31 +36,30 @@ import net.sourceforge.htmlunit.corejs.javascript.tools.debugger.Main;
         }
     ]
 }
-
+ * 
  * </pre>
  * 
  * @author Lily
  *
  */
 public class JsonUtil {
-	
-	
-	
+
 	public static void main(String[] args) {
-		
+
 		String originalStr = "{\"result\":[{\"No\":\"123XXX\",\"Date\":\"20170828\",\"SA\":\"Beijing\",\"DA\":\"Shanghai\"},{\"No\":\"124XXX\",\"Date\":\"20170828\",\"SA\":\"Beijing\",\"DA\":\"Shanghai\"},{\"No\":\"125XXX\",\"Date\":\"20170828\",\"SA\":\"Beijing\",\"DA\":\"Shanghai\"}]}";
 		JSONObject jsonObject = (JSONObject) JSONObject.parse(originalStr);
-		JSONArray jsonArray= (JSONArray) jsonObject.get("result");
+		JSONArray jsonArray = (JSONArray) jsonObject.get("result");
 		JSONObject firsrObject = (JSONObject) jsonArray.get(0);
 		String flightNo = firsrObject.get("No").toString();
-		Assert.assertEquals("╤оят", "123XXX", flightNo);
+		Assert.assertEquals("assert", "123XXX", flightNo);
 		
-//		for (Object object : jsonArray) {
-//			JSONObject json = (JSONObject) object;
-//			String actural = (String) json.get("Date");
-//			Assert.assertEquals("╤оят", "20170828", actural, delta);
-//		}
-		
+
+		// for (Object object : jsonArray) {
+		// JSONObject json = (JSONObject) object;
+		// String actural = (String) json.get("Date");
+		// Assert.assertEquals("О©╫О©╫О©╫О©╫", "20170828", actural, delta);
+		// }
+
 	}
 
 }
