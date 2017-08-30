@@ -1,13 +1,11 @@
 package com.lily.flighttest;
 
+import java.io.IOException;
 import java.nio.charset.Charset;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 
 import javax.net.ssl.SSLContext;
 
 import org.apache.http.HttpEntity;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -23,7 +21,8 @@ import org.apache.http.util.EntityUtils;
  *
  */
 public class HttpClientUtil {
-	public static String httpClientGet(String url) {
+	
+	public static String httpClientGet(String url) throws IOException {
 
 		// 创建HttpClientBuilder
 		HttpClientBuilder httpclientbuilder = HttpClientBuilder.create();
@@ -44,15 +43,18 @@ public class HttpClientUtil {
 			if (entity != null) {
 				return EntityUtils.toString(entity);
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			// 关闭连接，释放资源
 			httpclient.close();
 		}
+		return null;
 	}
 
 	public static String httpClientPost(String url, String param) {
+		
 		HttpClientBuilder httpclientbuilder = HttpClientBuilder.create();
 
 		CloseableHttpClient httpclient = httpclientbuilder.build();
@@ -74,6 +76,7 @@ public class HttpClientUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 	/**
@@ -82,7 +85,6 @@ public class HttpClientUtil {
 	 * @author Administrator
 	 *
 	 */
-	@SuppressWarnings("deprecation")
 	public static void configureHttpClient(HttpClientBuilder httpclientbulider) {
 		try {
 			SSLContext sslcontext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
@@ -91,6 +93,7 @@ public class HttpClientUtil {
 					return true;
 				}
 			}).build();
+			httpclientbulider.setSslcontext(sslcontext);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
