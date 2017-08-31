@@ -52,7 +52,6 @@ public class JsonUtil {
 		JSONObject firsrObject = (JSONObject) jsonArray.get(0);
 		String flightNo = firsrObject.get("No").toString();
 		Assert.assertEquals("assert", "123XXX", flightNo);
-		
 
 		// for (Object object : jsonArray) {
 		// JSONObject json = (JSONObject) object;

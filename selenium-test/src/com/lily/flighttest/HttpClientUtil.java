@@ -9,11 +9,11 @@ import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.conn.ssl.SSLContextBuilder;
 import org.apache.http.conn.ssl.TrustStrategy;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.util.EntityUtils;
 
 /**
@@ -21,12 +21,13 @@ import org.apache.http.util.EntityUtils;
  *
  */
 public class HttpClientUtil {
-	
+
 	public static String httpClientGet(String url) throws IOException {
 
 		// 创建HttpClientBuilder
 		HttpClientBuilder httpclientbuilder = HttpClientBuilder.create();
 		// 配置config，支持https请求
+		configureHttpClient(httpclientbuilder);
 
 		// 通过httpclientbuilder build一个可关闭的httpclient
 		CloseableHttpClient httpclient = httpclientbuilder.build();
@@ -43,7 +44,7 @@ public class HttpClientUtil {
 			if (entity != null) {
 				return EntityUtils.toString(entity);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -54,8 +55,10 @@ public class HttpClientUtil {
 	}
 
 	public static String httpClientPost(String url, String param) {
-		
+
 		HttpClientBuilder httpclientbuilder = HttpClientBuilder.create();
+
+		configureHttpClient(httpclientbuilder);
 
 		CloseableHttpClient httpclient = httpclientbuilder.build();
 
@@ -93,7 +96,7 @@ public class HttpClientUtil {
 					return true;
 				}
 			}).build();
-			httpclientbulider.setSslcontext(sslcontext);
+			httpclientbulider.setSSLContext(sslcontext);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

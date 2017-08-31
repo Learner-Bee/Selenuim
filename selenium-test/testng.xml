@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http:testng.org/testng-1.0.dtd">
-<suite name="Default suite" allow-return-values="true">
-<test name="Dafault test">
-<classes>
-<class name="com.lily.seleniumdemo.NewTestNG"/>
-</classes>
-</test><!--Test-->
-</suite><!--Suite-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+	<test name="test1">
+		<classes> 
+			<class name="NewTestXML">
+		</classes>
+	</test>
+</suite>
