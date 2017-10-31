@@ -13,8 +13,11 @@
 * 重启命令：jenkins.exe restart
 
 ### Mac下
+##3、jenkins停服
 
-##3、Dadily Build 每日构建  
+* 打开cmd
+* 根目录下输入：net stop jenkins
+##4、Dadily Build 每日构建  
 分别是：minute hour dom month dow 
 
 * minute：0-59。表示分钟数
