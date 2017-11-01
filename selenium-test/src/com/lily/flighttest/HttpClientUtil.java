@@ -32,7 +32,6 @@ public class HttpClientUtil {
 		// 通过httpclientbuilder build一个可关闭的httpclient
 		CloseableHttpClient httpclient = httpclientbuilder.build();
 		try {
-
 			// 实例一个httpget对象
 			HttpGet httpget = new HttpGet(url);
 
@@ -44,7 +43,6 @@ public class HttpClientUtil {
 			if (entity != null) {
 				return EntityUtils.toString(entity);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
